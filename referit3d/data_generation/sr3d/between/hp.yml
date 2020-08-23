@@ -1,0 +1,17 @@
+---
+# Between
+min_target_to_anchor_z_intersection: 0.2
+safe_distance: 0.3
+min_forbidden_occ_ratio: 0.1
+target_anchor_intersect_ratio_thresh: 0.1
+occ_thresh: 0.51
+exclude_anchor_instances:
+  - clothing
+  - clothes
+  - cup
+  - books
+  - book
+  - bottle
+  - towel
+anchors_must_be_unique: True
+

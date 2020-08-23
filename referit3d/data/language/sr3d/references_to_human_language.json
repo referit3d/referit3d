@@ -1,0 +1,309 @@
+{
+  "templates": {
+    "support": [
+      {
+        "sentences": [
+          "the %target% that %target_verb% %relation% the %anchor%",
+          "find the %target% that %target_verb% %relation% the %anchor%",
+          "choose the %target% that %target_verb% %relation% the %anchor%",
+          "select the %target% that %target_verb%  %relation% the %anchor%"
+        ],
+        "conditions": []
+      },
+      {
+        "sentences": [
+          "the %target% with %anchor_article% %anchor% on top of %target_object_pronoun%",
+          "find the %target% with %anchor_article% %anchor% on top of %target_object_pronoun%",
+          "choose the %target% with %anchor_article% %anchor% on top of %target_object_pronoun%",
+          "select the %target% with %anchor_article% %anchor% on top of %target_object_pronoun%",
+
+          "the %target% with %anchor_article% %anchor% on %target_possessive_pronoun% top",
+          "find the %target% with %anchor_article% %anchor% on %target_possessive_pronoun% top",
+          "select the %target% with %anchor_article% %anchor% on %target_possessive_pronoun% top",
+          "choose the %target% with %anchor_article% %anchor% on %target_possessive_pronoun% top",
+
+          "the %target% with %anchor_article% %anchor% on top",
+          "find the %target% with %anchor_article% %anchor% on top",
+          "select the %target% with %anchor_article% %anchor% on top",
+          "choose the %target% with %anchor_article% %anchor% on top"
+        ],
+        "conditions": [
+          "SUPPORTING_RELATION"
+        ]
+      }
+    ],
+    "vertical": [
+      {
+        "sentences": [
+          "the %target% that %target_verb% %relation% the %anchor%",
+          "find the %target% that %target_verb% %relation% the %anchor%",
+          "choose the %target% that %target_verb% %relation% the %anchor%",
+          "select the %target% that %target_verb% %relation% the %anchor%"
+        ],
+        "conditions": []
+      }
+    ],
+    "horizontal": [
+      {
+        "sentences": [
+          "the %target% that %target_verb% %relation% the %anchor%",
+          "find the %target% that %target_verb% %relation% the %anchor%",
+          "choose the %target% that %target_verb% %relation% the %anchor%",
+          "select the %target% that %target_verb% %relation% the %anchor%"
+        ],
+        "conditions": [
+          "NOT_NEXT_TO"
+        ]
+      },
+      {
+        "sentences": [
+          "the %target% that %target_verb% next to the %anchor%",
+          "find the %target% that %target_verb% next to the %anchor%",
+          "choose the %target% that %target_verb% next to the %anchor%",
+          "the %target% that %target_verb% beside the %anchor%",
+          "choose the %target% that %target_verb% beside the %anchor%",
+          "find the %target% that %target_verb% beside the %anchor%"
+        ],
+        "conditions": [
+          "NEXT_TO"
+        ]
+      }
+    ],
+    "allocentric": [
+      {
+        "sentences": [
+          "looking at the front of the %anchor%, choose the %target% that %target_verb% %relation% %anchor_object_pronoun%",
+          "looking at the front of the %anchor%, select the %target% that %target_verb% %relation% %anchor_object_pronoun%",
+          "looking at the front of the %anchor%, pick the %target% that %target_verb% %relation% the %anchor%"
+        ],
+        "conditions": [
+          "NOT_FRONT_RELATION"
+        ]
+      },
+      {
+        "sentences": [
+          "facing the front of the %anchor%, choose the %target% that %target_verb% %relation% %anchor_object_pronoun%",
+          "facing the front of the %anchor%, select the %target% that %target_verb% %relation% %anchor_object_pronoun%",
+          "facing the front of the %anchor%, pick the %target% that %target_verb% %relation% the %anchor%"
+        ],
+        "conditions": [
+          "NOT_FRONT_RELATION"
+        ]
+      },
+      {
+        "sentences": [
+          "choose the %target% that %target_verb% %relation% the %anchor%",
+          "select the %target% that %target_verb% %relation% the %anchor%",
+          "find the %target% that %target_verb% %relation% the %anchor%"
+        ],
+        "conditions": [
+          "FRONT_RELATION"
+        ]
+      },
+      {
+        "sentences": [
+          "facing the %anchor% from the side you sit on %anchor_object_pronoun%, choose the %target% that %target_verb% %relation% %anchor_demonstrative% %anchor%",
+          "looking the %anchor% from the side you sit on %anchor_object_pronoun%, choose the %target% that %target_verb% %relation% %anchor_demonstrative% %anchor%"
+        ],
+        "conditions": [
+          "ONLY_INCLUDED_INSTANCES",
+          "NOT_FRONT_RELATION"
+        ],
+        "instances": [
+          "couch",
+          "office chair",
+          "chair",
+          "armchair",
+          "sofa chair"
+        ]
+      }
+    ],
+    "between": [
+      {
+        "sentences": [
+          "the %target% that %target_verb% between the %anchor% and the %anchor_2%",
+          "choose the %target% that %target_verb% between the %anchor% and the %anchor_2%",
+          "find the %target% that %target_verb% between the %anchor% and the %anchor_2%"
+        ],
+        "conditions": [
+          "NOT_IN_CENTER"
+        ]
+      },
+      {
+        "sentences": [
+          "the %target% that %target_verb% in the middle of the %anchor% and the %anchor_2%",
+          "choose the %target% that %target_verb% in the middle of the %anchor% and the %anchor_2%",
+          "find the %target% that %target_verb% in the middle of the %anchor% and the %anchor_2%"
+        ],
+        "conditions": [
+          "IN_CENTER"
+        ]
+      },
+      {
+        "sentences": [
+          "the %target% that %target_verb% in the center of the %anchor% and the %anchor_2%",
+          "choose the %target% that %target_verb% in the center of the %anchor% and the %anchor_2%",
+          "select the %target% that %target_verb% in the center of the %anchor% and the %anchor_2%"
+        ],
+        "conditions": [
+          "IN_CENTER"
+        ]
+      }
+    ]
+  },
+  "relations": {
+    "supported-by": "on top of/on/lying on",
+    "supporting": "supporting",
+    "above": "above/over",
+    "below": "below/under/beneath/underneath",
+    "farthest": "farthest from/far from/far away from",
+    "closest": "closer to/close to/near",
+    "front": "in front of",
+    "right": "on the right of/to the right of/on the right side of",
+    "back": "on the back of/behind",
+    "left": "on the left of/to the left of/on the left side of"
+  },
+  "demonstratives": [
+    "this",
+    "these"
+  ],
+  "object_pronouns": [
+    "it",
+    "them"
+  ],
+  "verbs": [
+    "is",
+    "are"
+  ],
+  "verb_to_have": [
+    "has",
+    "have"
+  ],
+  "possessive_pronouns": [
+    "its",
+    "their"
+  ],
+  "verb_index": {
+    "desk": 0,
+    "curtain": 0,
+    "end table": 0,
+    "coffee table": 0,
+    "couch": 0,
+    "office chair": 0,
+    "radiator": 0,
+    "door": 0,
+    "picture": 0,
+    "lamp": 0,
+    "trash can": 0,
+    "cabinets": 1,
+    "kitchen cabinets": 1,
+    "cabinet": 0,
+    "table": 0,
+    "stool": 0,
+    "shoes": 1,
+    "recycling bin": 0,
+    "bag": 0,
+    "telephone": 0,
+    "light": 0,
+    "backpack": 0,
+    "microwave": 0,
+    "sink": 0,
+    "mirror": 0,
+    "toilet": 0,
+    "towel": 0,
+    "chair": 0,
+    "whiteboard": 0,
+    "blackboard": 0,
+    "window": 0,
+    "monitor": 0,
+    "printer": 0,
+    "keyboard": 0,
+    "cart": 0,
+    "book": 0,
+    "computer tower": 0,
+    "shelf": 0,
+    "board": 0,
+    "bar": 0,
+    "toilet paper": 0,
+    "books": 1,
+    "bookshelf": 0,
+    "kitchen counter": 0,
+    "cup": 0,
+    "paper towel dispenser": 0,
+    "oven": 0,
+    "bathroom stall": 0,
+    "bathroom stall door": 0,
+    "kitchen cabinet": 0,
+    "plant": 0,
+    "coffee maker": 0,
+    "file cabinet": 0,
+    "ottoman": 0,
+    "bed": 0,
+    "laundry hamper": 0,
+    "blanket": 0,
+    "dresser": 0,
+    "wardrobe closet": 0,
+    "armchair": 0,
+    "sign": 0,
+    "person": 0,
+    "laptop": 0,
+    "doors": 1,
+    "suitcase": 0,
+    "nightstand": 0,
+    "soap dish": 0,
+    "bench": 0,
+    "mouse": 0,
+    "rail": 0,
+    "bottle": 0,
+    "sofa chair": 0,
+    "shower walls": 1,
+    "bathroom cabinet": 0,
+    "copier": 0,
+    "tv stand": 0,
+    "bathroom vanity": 0,
+    "bathtub": 0,
+    "shower curtain": 0,
+    "counter": 0,
+    "refrigerator": 0,
+    "bathroom counter": 0,
+    "stove": 0,
+    "water cooler": 0,
+    "bulletin board": 0,
+    "stairs": 1,
+    "shower": 0,
+    "closet": 0,
+    "closet doors": 1,
+    "storage bin": 0,
+    "box": 0,
+    "pillow": 0,
+    "pipe": 0,
+    "clothes dryer": 0,
+    "clothing": 0,
+    "clothes": 1,
+    "curtains": 1,
+    "blinds": 1,
+    "rack": 0,
+    "staircase": 0,
+    "projector screen": 0,
+    "dining table": 0,
+    "pillar": 0,
+    "fireplace": 0,
+    "drawer": 0,
+    "ladder": 0,
+    "washing machine": 0,
+    "pipes": 1,
+    "piano": 0,
+    "kitchen island": 0,
+    "column": 0,
+    "mattress": 0,
+    "mailboxes": 1,
+    "shower door": 0,
+    "tv": 0,
+    "fan": 0,
+    "clock": 0,
+    "basket": 0,
+    "dishwasher": 0,
+    "mini fridge": 0,
+    "seat": 0
+  }
+}

@@ -1,0 +1,12 @@
+---
+# HorizontalProximity
+horizontal_gap: 0.2 # Minimum distance gap between closest/farthest and second closest/farthest objects. If the gap is smaller, the context is too hard, and is ignored.
+exclude_anchor_instances:
+  - clothing
+  - clothes
+  - cup
+  - books
+  - book
+  - bottle
+  - towel
+

@@ -1,0 +1,21 @@
+---
+# Allocentric
+exclude_anchor_instances:
+  - table
+  - coffee table
+  - dining table
+  - folded table
+  - round table
+  - side table
+  - air hockey table
+  - end table
+  - blanket
+  - stool
+  - bathtub
+angle: 10
+max_dl: 1
+max_df: 1
+d2: 4
+positive_occ_thresh: 0.9
+negative_occ_thresh: 0.08
+anchors_must_be_unique: True
