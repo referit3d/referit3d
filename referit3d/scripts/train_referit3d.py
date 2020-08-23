@@ -57,11 +57,6 @@ if __name__ == '__main__':
     # Read the linguistic data of ReferIt3D
     referit_data = load_referential_data(args, args.referit3D_file, scans_split)
 
-    if True:  # FIXME remove after refactoring
-        print('**DEBUGGING** sub-sampling dataset.')
-        referit_data = referit_data.sample(1000, replace=False)
-        referit_data.reset_index(drop=True, inplace=True)
-
     # Prepare data & compute auxiliary meta-information.
     all_scans_in_dict = trim_scans_per_referit3d_data(referit_data, all_scans_in_dict)
     mean_rgb, vocab = compute_auxiliary_data(referit_data, all_scans_in_dict, args)

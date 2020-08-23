@@ -12,5 +12,3 @@ except ImportError:
     msg = colored('Pnet++ is not found. Hence you cannot run all models. Install it via '
                   'external_tools (see README.txt there).', 'red')
     print(msg)
-
-from .baseline_text_classifier import TextClassifier

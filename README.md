@@ -42,17 +42,20 @@ In this work we study the problem of using referential language to identify comm
 ## Dataset
 You need to download the train/val scans of ScanNet dataset. To do so, Please refer to the [ScanNet Dataset](referit3d/data/scannet/README.md) for more details.
 
-**Nr3D** is found in ```data/language/nr3d/nr3d_tokenized.csv```
-**Sr3D** is found in ```data/language/sr3d/tokenized/sr3d.csv```
-**Sr3D+** is found in ```data/language/sr3d/tokenized/sr3d+.csv```
+**Nr3D** is found in ```data/language/nr3d/nr3d_tokenized.csv```  
+**Sr3D** is found in ```data/language/sr3d/tokenized/sr3d.csv```  
+**Sr3D+** is found in ```data/language/sr3d/tokenized/sr3d+.csv```  
 
-Since Sr3d is synthetically made, you change the code/hyper-parameters to create a new one from scratch. please advise [Sr3D Generation](referit3d/data_generation/sr3d/README.md) page.  
+Since Sr3d is synthetically made, you change the code/hyper-parameters to create a new one from scratch.  
 
 ## Train
 * To train on either Nr3d or Sr3d dataset, use the following command
 ```Console
-    python referit3d/scripts/train_referit3d.py -scannet-file the_processed_scannet_file -referit3d-file dataset_file.csv --log-dir dir_to_log
+    cd referit3d/scripts/
+    python train_referit3d.py -scannet-file the_processed_scannet_file -referit3d-file dataset_file.csv --log-dir dir_to_log --n-workers 4
 ```
+feel free to change the number of workers to match your #CPUs and RAM size.
+
 * To train nr3d in joint with sr3d, add the following argument
 ```Console
     --augment-with-sr3d sr3d_dataset_file.csv
@@ -61,7 +64,8 @@ Since Sr3d is synthetically made, you change the code/hyper-parameters to create
 ## Eval
 * To evaluate on either Nr3d or Sr3d dataset, use the following command
 ```Console
-    python referit3d/scripts/train_referit3d.py --mode evaluate -scannet-file the_processed_scannet_file -referit3d-file dataset_file.csv --resume-path the_path_to_the_best_model 
+    cd referit3d/scripts/
+    python train_referit3d.py --mode evaluate -scannet-file the_processed_scannet_file -referit3d-file dataset_file.csv --resume-path the_path_to_the_best_model.pth  --n-workers 4 
 ```
 * To evaluate on joint trained model, add the following argument to the above command
 ```Console
@@ -73,7 +77,7 @@ Since Sr3d is synthetically made, you change the code/hyper-parameters to create
     ```Console
     python data_generation/sr3D/create_data.py --arguments
     ```
-   The generation with the default settings takes XX hours and produces an output sr3d_references.csv
+   The generation with the default settings takes 3 hours and produces an output sr3d_references.csv
    containing the synthetic grounded referential language over Scannet.  
    
 - For Nr3D, use directly data/nr3d.csv

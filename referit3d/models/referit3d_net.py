@@ -131,7 +131,6 @@ def instantiate_referit3d_net(args: argparse.Namespace, vocab: Vocabulary, n_obj
     # make a language encoder
     lang_encoder = token_encoder(vocab=vocab,
                                  word_embedding_dim=args.word_embedding_dim,
-                                 glove_emb_file=args.glove_file,
                                  lstm_n_hidden=lang_out_dim,
                                  word_dropout=args.word_dropout,
                                  random_seed=args.random_seed)

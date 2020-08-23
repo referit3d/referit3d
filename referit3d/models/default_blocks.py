@@ -36,11 +36,11 @@ def single_object_encoder(out_dim: int) -> PointNetPP:
 #
 def token_encoder(vocab: Vocabulary,
                   word_embedding_dim: int,
-                  glove_emb_file: str,
                   lstm_n_hidden: int,
                   word_dropout: float,
                   init_c=None, init_h=None, random_seed=None,
-                  feature_type='max') -> LSTMEncoder:
+                  feature_type='max',
+                  glove_emb_file: str = '') -> LSTMEncoder:
     """
     Language Token Encoder.
 
@@ -54,7 +54,7 @@ def token_encoder(vocab: Vocabulary,
     @param random_seed:
     @param feature_type:
     """
-    if glove_emb_file is not None:
+    if len(glove_emb_file) > 0:
         print('Using glove pre-trained embeddings.')
         glove_embedding = load_glove_pretrained_embedding(glove_emb_file, verbose=True)
         word_embedding = make_pretrained_embedding(vocab, glove_embedding, random_seed=random_seed)

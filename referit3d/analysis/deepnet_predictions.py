@@ -46,8 +46,6 @@ def analyze_predictions(model, dataset, class_to_idx, pad_idx, device, args, out
     if visualize_output:
         from referit3d.utils import pickle_data
         pickle_data(out_file[:-4] + 'all_vis.pkl', net_stats_all_seed)
-#        out = pd.DataFrame(net_stats_all_seed[0])
-#        out.to_csv(out_file[:-4] + '_vis.csv', index=False)
 
 
     all_accuracy = []
