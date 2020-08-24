@@ -1,0 +1,10 @@
+---
+# VerticalProximity
+max_touch_distance: 0.15
+min_above_below_distance: 0.06
+max_supporting_area_ratio: 1.5 # Avoid using objects that are quite larger in area that the other object supporting it
+min_supported_area_ratio: 0.3 # The minimum intersection to the object's area in the topview in order to be considered on top of the other object
+min_to_be_above_below_area_ratio: 0.2
+exclude_anchor_instances:
+  - cup
+  - keyboard
