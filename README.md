@@ -2,7 +2,7 @@
 [![Website Badge](images/project_website_badge.svg)](https://referit3d.github.io)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 <!--[![arXiv](https://img.shields.io/badge/arXiv-1234.56789-b31b1b.svg?style=plastic)](https://arxiv.org/abs/1234.56789)-->
-Created by: Panos Achlioptas, Ahmed Abdelreheem, Fei Xia, Mohamed Elhoseiny, Leonidas Guibas  
+Created by: [Panos Achlioptas](http://ai.stanford.edu/~optas/), [Ahmed Abdelreheem](http://aabdelreheem.me), [Fei Xia](http://fxia.me/), [Mohamed Elhoseiny](http://www.mohamed-elhoseiny.com/), [Leonidas Guibas](https://geometry.stanford.edu/member/guibas/)
   
  
 ## Introduction
@@ -96,5 +96,4 @@ python train_referit3d.py --mode evaluate -scannet-file path_to_keep_all_points_
 ```
 
 ## License
-The code is licensed under MIT license.  
-Panos Achlioptas, Ahmed Abdelreheem, Fei Xia, Mohamed Elhoseiny, Leonidas Guibas
+The code is licensed under MIT license (see LICENSE.md for details).
