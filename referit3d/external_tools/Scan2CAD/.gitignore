@@ -1,0 +1,32 @@
+# hidden files
+.*
+
+
+# generated 
+full_annotations.json
+output
+build
+meshes
+tmp
+bin
+lib
+__*
+*.vox
+*.vox2
+*.dat
+*.ply
+*.xyz
+main
+*.pth
+*.pyc
+*.obj
+*.sdfpdf
+*.so
+**/scripts/*.txt
+**/scripts/*.csv
+trash
+
+
+# exception
+!.gitignore
+
