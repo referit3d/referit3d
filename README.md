@@ -76,10 +76,10 @@ feel free to change the number of workers to match your #CPUs and RAM size.
 ``` 
 
 ## Pretrained model
-you can download a pretrained ReferIt3DNet model on Nr3D [here](https://drive.google.com/drive/folders/1v50Bwq224Cj4Y4h-OX8mzDaKCQzMeFLl?usp=sharing). please extract the zip file and then copy the extracted folder to referit3d/log folder. you can run the following the command to evaluate:
+you can download a pretrained ReferIt3DNet models on Nr3D and Sr3D [here](https://drive.google.com/drive/folders/1v50Bwq224Cj4Y4h-OX8mzDaKCQzMeFLl?usp=sharing). please extract the zip file and then copy the extracted folder to referit3d/log folder. you can run the following the command to evaluate:
 ```
 cd referit3d/scripts
-python train_referit3d.py --mode evaluate -scannet-file path_to_keep_all_points_00_view_with_global_scan_alignment.pkl  -referit3D-file path_to_nr3d.csv  --resume-path ../log/pretrained_nr3d/checkpoints/best_model.pth
+python train_referit3d.py --mode evaluate -scannet-file path_to_keep_all_points_00_view_with_global_scan_alignment.pkl  -referit3D-file path_to_corresponding_csv.csv  --resume-path checkpoints/best_model.pth
 ```
 
 ## LeaderBoard
