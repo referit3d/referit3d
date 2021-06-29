@@ -55,7 +55,7 @@ Since Sr3d is a synthetic dataset, you can change the hyper-parameters to create
 * To train on either Nr3d or Sr3d dataset, use the following commands
 ```Console
     cd referit3d/scripts/
-    python train_referit3d.py -scannet-file the_processed_scannet_file -referit3d-file dataset_file.csv --log-dir dir_to_log --n-workers 4
+    python train_referit3d.py -scannet-file the_processed_scannet_file -referit3D-file dataset_file.csv --log-dir dir_to_log --n-workers 4
 ```
 feel free to change the number of workers to match your #CPUs and RAM size.
 
@@ -68,7 +68,7 @@ feel free to change the number of workers to match your #CPUs and RAM size.
 * To evaluate on either Nr3d or Sr3d dataset, use the following commands
 ```Console
     cd referit3d/scripts/
-    python train_referit3d.py --mode evaluate -scannet-file the_processed_scannet_file -referit3d-file dataset_file.csv --resume-path the_path_to_the_best_model.pth  --n-workers 4 
+    python train_referit3d.py --mode evaluate -scannet-file the_processed_scannet_file -referit3D-file dataset_file.csv --resume-path the_path_to_the_best_model.pth  --n-workers 4 --batch-size 64 
 ```
 * To evaluate on joint trained model, add the following argument to the above command
 ```Console
@@ -82,8 +82,8 @@ cd referit3d/scripts
 python train_referit3d.py --mode evaluate -scannet-file path_to_keep_all_points_00_view_with_global_scan_alignment.pkl  -referit3D-file path_to_corresponding_csv.csv  --resume-path checkpoints/best_model.pth
 ```
 
-## LeaderBoard
-   Coming soon!
+## ReferIt3D Benchmark Challenges
+We wish to aggregate and highlight results from different approaches tackling the problem of fine-grained 3D object identification via language. If you use either of our datasets with a new method, please let us know! so we can add your method and attained results in our [benchmark-aggregating page](https://referit3d.github.io/benchmarks.html).
 
 ## Citation
 ```
